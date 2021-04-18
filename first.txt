@@ -1,2 +1,5 @@
 This is version 1 of my project.
 I want this to go into commit 2.
+This is 1st change for git diff.
+This is 2nd change for git diff.
+new text file is created
