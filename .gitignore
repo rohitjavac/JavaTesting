@@ -2,4 +2,4 @@
 *.log
 dir/
 /dir/
-db.accdb
+myexcel.xlsx
