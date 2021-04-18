@@ -1,0 +1,223 @@
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git
+$ git init
+Initialized empty Git repository in F:/git/.git/
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        db.accdb.accdb
+        first.txt.txt
+        myexcel.xlsx
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git (master)
+$ git --a
+unknown option: --a
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git (master)
+$ git add --a
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   db.accdb.accdb
+        new file:   first.txt.txt
+        new file:   myexcel.xlsx
+
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git (master)
+$ git commit -m "Initial commit"
+[master (root-commit) 1bc2aed] Initial commit
+ 3 files changed, 1 insertion(+)
+ create mode 100644 db.accdb.accdb
+ create mode 100644 first.txt.txt
+ create mode 100644 myexcel.xlsx
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git (master)
+$ git log
+commit 1bc2aed20bae9a5be89842879f3d67670ff13872 (HEAD -> master)
+Author: Rohit <krishnarangrajan@gmail.com>
+Date:   Sat Apr 17 21:03:11 2021 +0530
+
+    Initial commit
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   first.txt.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   first.txt.txt
+        modified:   myexcel.xlsx
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git (master)
+$ git add first.txt
+fatal: pathspec 'first.txt' did not match any files
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git (master)
+$ git add first.txt.txt
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   first.txt.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   myexcel.xlsx
+
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git (master)
+$ git commit -m "changed first.txt.txt and added better design"
+[master 1b3bcfc] changed first.txt.txt and added better design
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   myexcel.xlsx
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git (master)
+$ git add --a
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   myexcel.xlsx
+
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git (master)
+$ git commit -m "this is modified myexcel"
+[master 8e1b3b6] this is modified myexcel
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rewrite myexcel.xlsx (69%)
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git (master)
+$ git log
+commit 8e1b3b6b8582da6a124abba3c5f0bcb042969b99 (HEAD -> master)
+Author: Rohit <krishnarangrajan@gmail.com>
+Date:   Sat Apr 17 21:25:08 2021 +0530
+
+    this is modified myexcel
+
+commit 1b3bcfcc2d54719b9b975df3cc3e15e19d53e6d3
+Author: Rohit <krishnarangrajan@gmail.com>
+Date:   Sat Apr 17 21:19:44 2021 +0530
+
+    changed first.txt.txt and added better design
+
+commit 1bc2aed20bae9a5be89842879f3d67670ff13872
+Author: Rohit <krishnarangrajan@gmail.com>
+Date:   Sat Apr 17 21:03:11 2021 +0530
+
+    Initial commit
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git (master)
+$ +-
+bash: +-: command not found
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git (master)
+$ rm -rf .git
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git
+$ git init
+Initialized empty Git repository in F:/git/.git/
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git (master)
+$ git add --a
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git (master)
+$ rm -rf .git
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git
+$ git init
+Initialized empty Git repository in F:/git/.git/
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git (master)
+$ git add --a
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git (master)
+$ git commit -m "Initial commit"
+[master (root-commit) 56de513] Initial commit
+ 3 files changed, 2 insertions(+)
+ create mode 100644 db.accdb.accdb
+ create mode 100644 first.txt.txt
+ create mode 100644 myexcel.xlsx
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git (master)
+$ git log
+commit 56de5134f2fe9a48566c4a26b777516168852ad3 (HEAD -> master)
+Author: Rohit <krishnarangrajan@gmail.com>
+Date:   Sat Apr 17 22:47:08 2021 +0530
+
+    Initial commit
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git (master)
+$ rm -rf .git
+
+ROHIT KUMAR@DESKTOP-O8MMNI7 MINGW64 /f/git
+$ git clone https://github.com/tensorflow/tensorflow.git
